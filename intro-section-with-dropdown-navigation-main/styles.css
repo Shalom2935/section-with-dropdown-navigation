@@ -1,0 +1,423 @@
+*{
+    padding: 0;
+    list-style: none;
+    margin: 0;
+    font-family: 'Epilogue';
+    
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    align-items:  center;
+    height: 50px;
+    background-color: hsl(0, 0%, 98%);
+    position: relative;
+    
+}
+body{
+    background-color: hsl(0, 0%, 98%);
+}
+.navbar{
+    flex-grow: 0.75;
+}
+.nav-bloc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.navbar .nav-bloc .nav-links ul{
+    display: flex;
+    column-gap: 50px;
+    z-index: 2;
+}
+.navbar ul li{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+    position:relative;
+    z-index: 2;
+   
+}
+.navbar ul li div{
+    display: flex;
+    align-items: baseline;
+    column-gap: 5px;
+    position:relative;  
+    z-index: 2;
+}
+.navbar ul li  a{
+    color: black;
+    text-decoration: none;
+}
+.navbar ul li  a:visited{
+    color: black;
+    text-decoration: none;
+}
+.navbar ul .dropdown, .dropdown1{
+    display: block;
+    position: relative;
+   
+}.navbar .dropdown .dropdown-options{
+    position:absolute;
+    right: 0;
+    top: 200%;
+    z-index: 1;
+  
+}
+.dropdown1 .dropdown-options1{
+    position:absolute;
+    left: 0;
+    top: 200%;
+    z-index: 1;
+    width: 150px;
+}
+.show {
+    padding: 15px;
+    min-height:100px;
+}
+.arrow{
+    transform: rotate(180deg);
+    transition:  1s;
+    
+}
+.navbar ul .dropdown .dropdown-options ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+    top: 200%;
+    border:none;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 30px  hsl(0, 1%, 66%);
+    transition: all 0.3s ease;
+
+}
+.company-info{
+    font-size: 13px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height:0;
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 200%;
+    border:none;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 2px 2px 30px  hsl(0, 1%, 66%);
+    transition: all 0.3s ease;
+}
+.dropdown-options ul li,.dropdown-options1 ul li {
+    display: flex;
+    column-gap: 15px;
+}
+.dropdown-options ul li p, .dropdown-options1 ul li p{
+    font-size: 10px;
+}
+
+.user-connexion{
+    flex-grow: 0.7;
+    display: flex;
+    justify-content: flex-end;
+}
+.user-connexion ul{
+    display: flex;
+}
+.user-connexion ul li{
+    width: 100px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+li button{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+    border: solid 2px black;
+}
+.container{
+    padding-top: 60px;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 30px;
+    margin: 0 auto;
+    height: 500px;
+}
+.container section{
+    max-height: 100%;
+}
+.text-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    row-gap: 35px;
+    padding-left:70px;
+    padding-top: 70px;
+}
+.text-content .content{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    text-orientation: sideways-right;
+    inline-size: auto;
+}
+.text-content .content h1{
+    font-size: 50px;
+    font-weight: 900;
+}
+.text-content .content h2{
+    font-size: 14px;
+    color: hsl(0, 0%, 41%);
+    font-weight: lighter;
+    max-width: 80%;
+    height: auto;
+    
+}
+.text-content button{
+    width: 30%;
+    height: 45px;
+    color: white;
+    font-weight: 700;
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 8%);
+    border: none;
+}
+.text-content button:hover{
+    font-size: 15px;
+    height: 48px;
+    width: 32%;
+    color:hsl(0, 0%, 8%) ;
+    background-color: white;
+    border: solid 2px black;
+    transition: border 0.5s, font-size 0.5s, height 0.5s, color 0.5s, background-color 0.5s, width 0.5s;
+}
+.text-content .icon-images ul{
+    display: flex;
+    column-gap: 25px;
+}
+.image-content{
+    width:100%;
+    height: 100%;
+}
+.image-hero{
+   width: auto;
+   height: 100%;
+   float: right;
+
+}
+.hero-desktop{
+    width: 70%;
+    float: right;
+}
+ img{
+  max-width: 100%;
+    
+}
+.menu-button{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.close-button{
+    display: none;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.hero-mobile{
+   display: none;
+}
+.nav-menu{
+    display: none;
+    position: absolute;
+}
+@media (max-width: 600px) {
+    
+    header{
+     position: relative;
+     z-index: 1;
+    }
+    .navbar{
+        position:fixed;
+        box-sizing: border-box;
+        width:100vw;
+        height: 100vh;
+        margin-right:0;
+        top: 0;
+        overflow: hidden;
+        z-index: 0;
+        transition: all 0.5s ease;
+       
+    }
+    .nav-bloc{
+        margin-right: -60%;
+    }
+    .navbar .nav-bloc{
+        width: 60%;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        z-index: 0;
+        float: right;
+        padding-top: 70px ;
+        position: relative;
+        transition: all 0.5s ease;
+    }
+    .background-menu{
+        z-index: 2;
+        background-color: rgba(54, 52, 52, 0.445);
+    }
+    .show-menu{
+        z-index: 2;
+        margin-right: 0;
+    }
+    .close-menu{
+        margin-right: -200%;
+    }
+    
+    .navbar .nav-bloc .nav-links ul{
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding-left: 5vw;
+    }
+    .show{
+        padding: unset;
+        padding-top: 15px;
+    }
+    .menu-button{
+        display: block;
+        z-index: 1;
+    }
+    .close-button{
+        display: block;
+        z-index: 3;
+    }
+    .user-connexion{
+        
+        top: 260px;
+        right: 5vw;
+        z-index: 2;
+    }
+    .user-connexion ul{
+        display:block;
+    }
+    .user-connexion ul li, .user-connexion ul li button{
+        text-align: center;
+        width: 50vw;
+        height: 45px;
+        font-size: 15px;
+    }
+    .navbar .dropdown .dropdown-options{
+    position: static;
+    }
+    .dropdown1{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar ul li{
+        align-items: unset;
+    }
+    .dropdown1 .dropdown-options1{
+        position: static;
+    }
+     .navbar ul .dropdown .dropdown-options ul li p, .dropdown-options1 ul li{
+        font-size: 15px;
+     }
+
+    .navbar ul .dropdown .dropdown-options ul, .dropdown-options1 ul{
+        position: static;
+        box-shadow: none;
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        height: 0;
+        overflow: hidden;
+        right: 0;
+        top: 200%;
+        border:none;
+        transition: all 0.3s ease;
+    
+    }
+    .company-info{
+        font-size: 13px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height:0;
+        overflow: hidden;
+        left: 0;
+        top: 200%;
+        border:none;
+        transition: all 0.3s ease;
+    }
+    .logo{
+        position: absolute;
+        top: 20px;
+        left:20px;
+        z-index: 1;
+       
+    }
+    .container{
+        padding: 0;
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+    .hero-desktop{
+     display: none;
+    }
+    .hero-mobile{
+        display: block;
+        width: 100%;
+    }
+    .hero-mobile img{
+        max-width: 100%;
+        position: absolute;
+    }
+    .image-hero{
+        width: 100%;
+        position: relative;
+        top: 40px;
+    }
+    .image-content{
+        max-width: 100%;
+    }
+    .text-content{
+        position: relative;
+        top: 40%;
+        padding:10px;
+        align-items: center;
+    }
+    .text-content .content{
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    .text-content .content h1{
+        font-size: 27px;
+        font-weight: bolder;
+    }
+    .text-content .content h2{
+        text-align: center;
+        font-size: 15px;
+        font-weight: 100;
+    }
+    .text-content .icon-images ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 10px;
+    }
+}
